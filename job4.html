@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>亲子故事会</title>
+    <style>
+        /* 要求的.page样式（修改背景色为蜂蜜金） */
+        .page {
+            display: inline-block;
+            background-color: #FCE9C9; /* 蜂蜜金 */
+            box-shadow: 0 0 30px rgba(80, 58, 35, 0.25);
+            text-align: left;
+            max-width: 720px;
+        }
+
+        /* 并集选择器：标题样式 */
+        h1, h2, h3, h4, h5, h6 {
+            font-family: "幼圆", "微软雅黑", sans-serif;
+            color: #8B5A2B;
+            margin: 20px 15px;
+            text-shadow: 1px 1px 2px rgba(255,255,255,0.8);
+        }
+
+        /* ID选择器：重要提示强调 */
+        p#intro {
+            font-size: 1.3em;
+            font-weight: bold;
+            color: #D2691E;
+            margin: 15px;
+            background-color: rgba(255,255,255,0.6);
+            padding: 8px;
+            border-radius: 5px;
+        }
+
+        /* 后代选择器：表格内的链接样式 */
+        div table a {
+            color: #4682B4;
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        /* 链接伪类 */
+        a:link {
+            color: #CD5C5C;
+        }
+        a:visited {
+            color: #9370DB;
+        }
+        a:hover {
+            color: #FF6347;
+            text-decoration: underline;
+        }
+        a:active {
+            color: #32CD32;
+        }
+
+        /* 带类名的链接样式 */
+        a.red {
+            color: #FF4500;
+            font-size: 1.1em;
+        }
+        a.blue {
+            color: #1E90FF;
+            font-size: 1.1em;
+        }
+
+        /* 伪元素 */
+        p::first-letter {
+            font-size: 2em;
+            color: #8B4513;
+            font-weight: bold;
+            font-family: "楷体";
+        }
+        div::first-line {
+            line-height: 2;
+        }
+
+        /* 底部公告区样式 */
+        .notice {
+            margin: 20px 15px;
+            padding: 12px;
+            background-color: rgba(255,255,255,0.7);
+            border: 2px dashed #DEB887;
+            border-radius: 8px;
+        }
+
+        /* 基础排版辅助 */
+        p {
+            margin: 10px 15px;
+            line-height: 1.7;
+            color: #5D4037;
+            font-family: "微软雅黑", sans-serif;
+        }
+        table {
+            margin: 15px;
+            border-collapse: collapse;
+            width: calc(100% - 30px);
+            background-color: rgba(255,255,255,0.8);
+        }
+        th, td {
+            border: 2px solid #DEB887;
+            padding: 10px;
+            text-align: center;
+            font-family: "幼圆";
+        }
+        th {
+            background-color: #FFE4B5;
+            font-weight: bold;
+        }
+        div {
+            padding: 5px;
+        }
+    </style>
+</head>
+<body>
+    <div class="page">
+        <!-- ①顶部标题区 -->
+        <div>
+            <h1>亲子故事会 · Kids Story Time</h1>
+        </div>
+
+        <!-- ②活动介绍区 -->
+        <div>
+            <h2 id="intro">欢迎来到故事会！</h2>
+            <p>这里是装满童话和笑声的小天地~每周六下午，我们会围坐在软软的地毯上，一起读色彩斑斓的绘本，跟着故事里的小动物冒险，还能和爸爸妈妈一起扮演故事里的角色哦！</p>
+            <p>不管是会飞的小兔子，还是藏在云朵里的小怪兽，只要翻开书页，就能闯进奇妙的世界啦！每个小朋友都能收到专属的“故事小勋章”，收集满3枚就能兑换可爱的绘本礼物~</p>
+            <p id="intro">重要提示：记得带一个小玩偶来当“故事伙伴”哦！现场会准备小饼干和热牛奶~</p>
+        </div>
+
+        <!-- ③活动报名信息表格区 -->
+        <div>
+            <h3>本期故事小成员</h3>
+            <table>
+                <tr>
+                    <<th>宝贝昵称</</th>
+                    <<th>家长姓名</</th>
+                    <<th>想读的故事</</th>
+                    <<th>备注</</th>
+                </tr>
+                <tr>
+                    <td>多多</td>
+                    <td>李妈妈</td>
+                    <td>《猜猜我有多爱你》</td>
+                    <td>想和妈妈一起扮演兔子</td>
+                </tr>
+                <tr>
+                    <td>球球</td>
+                    <td>张爸爸</td>
+                    <td>《恐龙的温馨故事》</td>
+                    <td>自带了恐龙玩偶道具</td>
+                </tr>
+                <tr>
+                    <td>小糯米</td>
+                    <td>王妈妈</td>
+                    <td>《月亮的味道》</td>
+                    <td>喜欢听甜甜的故事</td>
+                </tr>
+                <tr>
+                    <td>小核桃</td>
+                    <td>刘爸爸</td>
+                    <td>《小熊宝宝绘本》</td>
+                    <td>第一次参加故事会~</td>
+                </tr>
+            </table>
+        </div>
+
+        <!-- ④页面链接区 -->
+        <div>
+            <div>
+                <a href="https://hongchenwusdnu.github.io/bookstore/job4.html" class="red">查看往期故事会照片</a>
+                <br>
+                <a href="job3.html" class="blue">在线咨询故事会详情</a>
+            </div>
+        </div>
+
+        <!-- ⑤底部公告区 -->
+        <div class="notice">
+            <p>1. 本期故事会时间：2025年12月6日（周六）下午3:00<br>地点：社区绘本馆二楼“童话角”</p>
+            <p>2. 现场有“故事接力”游戏，记得和宝贝提前准备1个1分钟小片段~</p>
+            <p>3. 若宝贝对某本绘本过敏（比如毛绒封面），可以提前和工作人员说哦！<br>我们会准备替换的绘本哒~</p>
+        </div>
+    </div>
+</body>
+</html>
